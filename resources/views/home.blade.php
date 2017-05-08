@@ -11,6 +11,8 @@
                     Welcome   {{ Auth::user()->name }}!
                 </div>
                 <a href="RandomPicture">Click here for a random picture!</a>
+                <br>
+                <a href="UploadPicture">Click here to upload a picture</a>
             </div>
         </div>
     </div>
