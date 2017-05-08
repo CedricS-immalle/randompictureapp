@@ -10,20 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-namespace App\Http\Middleware;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
-class VerifyCsrfToken extends BaseVerifier
-{
-    /**
-     * The URIs that should be excluded from CSRF verification.
-     *
-     * @var array
-     */
-    protected $except = [
-        'stripe/*',
-    ];
-}
+
+
+
 
 
 Route::get('/', function () {
@@ -34,3 +24,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/RandomPicture', 'HomeController@picture')->name('RandomPicture');
+Route::get('/UploadPicture', 'HomeController@upload')->name('UploadPicture');

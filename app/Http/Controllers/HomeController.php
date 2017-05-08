@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('RandomPicture');
     }
+     public function upload()
+    {
+        return view('UploadPicture');
+    }
 }
