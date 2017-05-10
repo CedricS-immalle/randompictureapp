@@ -25,3 +25,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/RandomPicture', 'HomeController@picture')->name('RandomPicture');
 Route::get('/UploadPicture', 'HomeController@upload')->name('UploadPicture');
+Route::get('/Statistics', 'HomeController@Statistics')->name('Statistics');

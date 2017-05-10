@@ -1,7 +1,10 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Random picture</title>
 </head>
 <style type="text/css">
 	{margin-top: 30px;}
@@ -30,7 +33,33 @@ onclick="display_random_image();">Show Image</button>
         src: "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
         width: "1000",
         height: "500"
-    }];
+    },
+     {
+        src: "https://static1.squarespace.com/static/514dc233e4b0d4d5c3e061e6/56a13ae3c21b8616b74a8c93/56a13c62be7b9646c1dea805/1453407475301/image-fracking-water-resuse-site-green376.jpg",
+        width: "1000",
+        height: "500"
+    },
+     {
+        src: "http://www.joshuajacobs.org/wp-content/uploads/2014/04/121.jpg",
+        width: "1000",
+        height: "500"
+    },
+     {
+        src: "https://www.wired.com/images_blogs/wiredscience/2011/04/Panorama.jpg",
+        width: "1000",
+        height: "500"
+    },
+     {
+        src: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRrrgCMIXcxMXp0KJW_AYQBvKFSL77dcXbHlIuqUpI7_OzzWkZg",
+        width: "1000",
+        height: "500"
+    },
+     {
+        src: "https://static1.squarespace.com/static/52d2f585e4b03405bcb6b077/t/53f3e004e4b095c9ee7c32b3/1408491537386/",
+        width: "1000",
+        height: "500"
+    },]
+    ;
     
     var preBuffer = [];
     for (var i = 0, j = theImages.length; i < j; i++) {
@@ -40,29 +69,25 @@ onclick="display_random_image();">Show Image</button>
         preBuffer[i].height = theImages[i].height;
     }
    
-// create random image number
   function getRandomInt(min,max) 
     {
-      //  return Math.floor(Math.random() * (max - min + 1)) + min;
     
 imn = Math.floor(Math.random() * (max - min + 1)) + min;
     return preBuffer[imn];
     }  
 
-// 0 is first image,   preBuffer.length - 1) is  last image
   
 var newImage = getRandomInt(0, preBuffer.length - 1);
  
-// remove the previous images
 var images = document.getElementsByTagName('img');
 var l = images.length;
 for (var p = 0; p < l; p++) {
     images[0].parentNode.removeChild(images[0]);
 }
-// display the image  
 document.body.appendChild(newImage);
 }
 </script>
 </div>
 </body>
 </html>
+@endsection

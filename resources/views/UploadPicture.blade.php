@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta name="_token" content="{{  csrf_token() }}" />
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+
+
 <form 
 action="RandomPicture" method ="POST" enctype="multipart/form-data") >
+{{ csrf_field() }}
+
 File:
 <input type ="file" name="image"> <input type="submit" value="Upload">
-
+</form>
 <?php
 
 
@@ -30,5 +34,9 @@ else {
 
 ?>
 
-</body>
-</html>
+
+</div>
+        </div>
+    </div>
+</div>
+@endsection

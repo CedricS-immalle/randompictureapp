@@ -34,4 +34,8 @@ class HomeController extends Controller
     {
         return view('UploadPicture');
     }
+     public function Statistics()
+    {
+        return view('Statistics');
+    }
 }
