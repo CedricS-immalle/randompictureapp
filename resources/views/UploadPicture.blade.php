@@ -8,7 +8,7 @@
 
 
 <form 
-action="RandomPicture" method ="POST" enctype="multipart/form-data") >
+action="" method ="POST" enctype="multipart/form-data") >
 {{ csrf_field() }}
 
 File:

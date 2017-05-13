@@ -30,6 +30,7 @@ class HomeController extends Controller
     {
         return view('RandomPicture');
     }
+    public functio
      public function upload()
     {
         return view('UploadPicture');
